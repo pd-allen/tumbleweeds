@@ -7,12 +7,6 @@ description: Get in touch.
 
 ## Email
 
-[jane.doe@example.com](mailto:jane.doe@example.com)
+[cyr_sullivan@hotmail.com](mailto:cyr_sullivan@hotmail.com)
 
-## Connect
 
-- [GitHub](https://github.com/username)
-- [LinkedIn](https://www.linkedin.com/in/username)
-- [Twitter](https://twitter.com/username)
-- [Google Scholar](https://scholar.google.com)
-- [ORCID](https://orcid.org/0000-0000-0000-0000)
