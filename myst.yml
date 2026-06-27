@@ -37,8 +37,8 @@ project:
       hidden: true
 site:
   options:
-    logo: logo.png
-    logo_dark: logo.png
+    logo: tumbleweed.png
+    logo_dark: tumbleweed.png
     favicon: fav.ico
     style: custom.css
     # analytics_google: G-XXXXXXXXXX
