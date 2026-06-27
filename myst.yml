@@ -50,6 +50,4 @@ site:
   parts:
     primary_sidebar_footer: ''
     footer: |
-      [GitHub](https://github.com/username) |
-      [LinkedIn](https://www.linkedin.com/in/username) |
-      [Twitter](https://twitter.com/username)
+     
