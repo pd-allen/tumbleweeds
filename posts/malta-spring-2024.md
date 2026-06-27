@@ -1,4 +1,4 @@
-# Malta - Spring 2024
+# Malta - Spring 2025
 
 * cyrsullivan
 * Jun 3, 2025
