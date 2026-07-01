@@ -36,6 +36,13 @@ project:
     - file: contact.md
     - pattern: posts/*.md
       hidden: true
+
+# This exports configuration block must line up exactly with "project:" and "site:"
+exports:
+  - format: pdf
+    output: _build/pdf/blog-document.pdf
+    engine: typst
+
 site:
   options:
     logo: tumbleweed.png
@@ -51,7 +58,3 @@ site:
   parts:
     primary_sidebar_footer: ''
     footer: |
-  exports:
-    - format: pdf
-      output: _build/pdf/blog-document.pdf
-      engine: typst
