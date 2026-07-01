@@ -1,8 +1,16 @@
 version: 1
 project:
   title: The Traveling Tumbleweeds
+  subtitle: Terry and Sandy Tour the World
   description: Terry and Sandy tour the World.
   copyright: '2026'
+  date: 2026-07-01
+  
+  # Adding an explicit author list populates the front cover and removes blank pages
+  authors:
+    - name: Terry Sullivan
+    - name: Sandy Cyr
+
   keywords:
     - "2025"
     - "2024"
@@ -36,7 +44,6 @@ project:
     - format: typst
       template: plain_typst_book
       output: _build/exports/blog-document.pdf
-      # Explicitly list the order you want the actual posts to print in the PDF
       articles:
         - index.md
         - tags/2025.md
@@ -44,7 +51,6 @@ project:
         - tags/2023.md
         - tags/Flora Fauna.md
         - contact.md
-        # Append the explicit paths to the actual blog post files here:
         - posts/italy-spring-2025.md
         - posts/southeast-asia-april-2025.md
         - posts/here-comes-spring-sydney-2025.md
@@ -71,7 +77,6 @@ project:
         - posts/canadian-rockies-17-to-21-sept.md
         - posts/glacier-national-park-14-16-sept.md
         - posts/nomads-30-aug-2023.md
-        # Include your Flora/Fauna subseries files:
         - posts/flora-fauna-food-and-funny.md
         - posts/flora-fauna-food-and-funny-ii-and-festive.md
         - posts/flora-fauna-food-and-funny-iii.md
