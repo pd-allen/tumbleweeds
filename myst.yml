@@ -50,4 +50,7 @@ site:
   parts:
     primary_sidebar_footer: ''
     footer: |
-     
+  exports:
+    - format: pdf
+      output: exports/blog-post.pdf
+      engine: typst
