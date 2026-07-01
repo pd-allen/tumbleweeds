@@ -32,16 +32,19 @@ project:
     - pattern: posts/*.md
       hidden: true
 
-exports:
-  - format: typst
-    output: _build/pdf/blog-document.pdf
-    articles:
-      - index.md
-      - tags/2025.md
-      - tags/2024.md
-      - tags/2023.md
-      - tags/Flora Fauna.md
-      - contact.md
+  # FIX: Indented by 2 spaces so it is a child item of 'project:'
+  exports:
+    - format: pdf
+      template: plain_typst_book
+      output: _build/pdf/blog-document.pdf
+      articles:
+        - index.md
+        - tags/2025.md
+        - tags/2024.md
+        - tags/2023.md
+        - tags/Flora Fauna.md
+        - contact.md
+
 site:
   options:
     logo: tumbleweed.png
