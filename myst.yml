@@ -52,5 +52,5 @@ site:
     footer: |
   exports:
     - format: pdf
-      output: exports/blog-post.pdf
+      output: _build/pdf/blog-document.pdf
       engine: typst
