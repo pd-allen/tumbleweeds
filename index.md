@@ -1,6 +1,7 @@
 ---
 title: The Traveling Tumbleweeds
-authors: T&S
+authors:
+  - T&S
 exports:
   - format: pdf
     output: _build/pdf/blog-document.pdf
