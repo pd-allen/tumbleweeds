@@ -44,7 +44,7 @@ project:
       output: _build/exports/blog-document.pdf
       
       # Template custom parameters to control book structure
-      show_ToC: true
+      show_ToC: false
       ToC_depth: 2
       
       articles:
