@@ -32,5 +32,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: compiled-blog-pdf
-          path: _build/pdf/blog-document.pdf
+          path: blog-document.pdf
           if-no-files-found: error

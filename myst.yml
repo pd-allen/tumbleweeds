@@ -36,7 +36,7 @@ project:
   exports:
     - format: pdf
       template: plain_typst_book
-      output: _build/pdf/blog-document.pdf
+      output: blog-document.pdf
       articles:
         - index.md
         - tags/2025.md
