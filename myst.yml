@@ -2,11 +2,6 @@ version: 1
 project:
   title: The Traveling Tumbleweeds
   description: Terry and Sandy tour the World.
-  # thumbnail: images/profile-thumbnail.webp
-  # authors:
-  #   - name: Sandy Cyr and Terry Sullivan
-  #     email: cyr_sullivan@hotmail.com
-  
   copyright: '2026'
   keywords:
     - "2025"
@@ -37,11 +32,18 @@ project:
     - pattern: posts/*.md
       hidden: true
 
-# This exports configuration block must line up exactly with "project:" and "site:"
 exports:
   - format: pdf
     output: _build/pdf/blog-document.pdf
     engine: typst
+    # Tell the PDF compiler explicitly which files to stitch into your book
+    articles:
+      - index.md
+      - tags/2025.md
+      - tags/2024.md
+      - tags/2023.md
+      - tags/Flora Fauna.md
+      - contact.md
 
 site:
   options:
@@ -49,7 +51,6 @@ site:
     logo_dark: tumbleweed.png
     favicon: fav.ico
     style: custom.css
-    # analytics_google: G-XXXXXXXXXX
     folders: true
   actions:
     - title: RSS
