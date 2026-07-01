@@ -35,15 +35,21 @@ project:
 
   exports:
     - format: typst
+      # FIX: Switched from book format to a streamlined single-document renderer
       template: lapreprint-typst
       output: _build/exports/blog-document.pdf
-      # FIX: Removed index, tags, and contact files so compilation starts at the first post
       articles:
+        - index.md
+        - tags/2025.md
+        - tags/2024.md
+        - tags/2023.md
+        - tags/Flora Fauna.md
+        - contact.md
         - posts/italy-spring-2025.md
         - posts/southeast-asia-april-2025.md
         - posts/here-comes-spring-sydney-2025.md
         - posts/in-search-of-the-tasmanian-devil-febuary-2025.md
-        - posts/back-in-potts-point-sydney-jan-feb-2025.md
+        - posts/back-in-potts-point-sydney-jan-feb 2025.md
         - posts/touring-south-america-winter-2024.md
         - posts/touring-the-iberian-peninsula-fall-2024.md
         - posts/from-amsterdam-to-barcelona.md
