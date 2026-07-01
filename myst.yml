@@ -3,11 +3,6 @@ project:
   title: The Traveling Tumbleweeds
   description: Terry and Sandy tour the World.
   copyright: '2026'
-  
-  # Setting these to null blocks them from printing an automated cover layout
-  subtitle: null
-  authors: null
-  date: null
 
   keywords:
     - "2025"
@@ -40,13 +35,9 @@ project:
 
   exports:
     - format: typst
-      template: plain_typst_book
+      # FIX: Switched from book format to a streamlined single-document renderer
+      template: lapreprint-typst
       output: _build/exports/blog-document.pdf
-      
-      # Template custom parameters to control book structure
-      show_ToC: false
-      ToC_depth: 2
-      
       articles:
         - index.md
         - tags/2025.md
@@ -58,7 +49,7 @@ project:
         - posts/southeast-asia-april-2025.md
         - posts/here-comes-spring-sydney-2025.md
         - posts/in-search-of-the-tasmanian-devil-febuary-2025.md
-        - posts/back-in-potts-point-sydney-jan-feb-2025.md
+        - posts/back-in-potts-point-sydney-jan-feb 2025.md
         - posts/touring-south-america-winter-2024.md
         - posts/touring-the-iberian-peninsula-fall-2024.md
         - posts/from-amsterdam-to-barcelona.md
