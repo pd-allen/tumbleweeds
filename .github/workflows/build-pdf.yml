@@ -25,8 +25,8 @@ jobs:
 
       - name: Build PDF Document
         run: |
-          # Target project-level exports
-          myst build --pdf
+          # Explicitly trigger the Typst rendering pathway
+          myst build --typst
 
       - name: Upload PDF Artifact Only
         uses: actions/upload-artifact@v4

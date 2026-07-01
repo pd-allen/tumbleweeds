@@ -34,7 +34,7 @@ project:
 
   # FIX: Adjusted export path to look directly into the exports directory
   exports:
-    - format: pdf
+    - format: typst
       template: plain_typst_book
       output: _build/exports/blog-document.pdf
       articles:
