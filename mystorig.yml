@@ -29,12 +29,7 @@ project:
     - CONTRIBUTING.md
     - README.md
   toc:
-    - file: index.md
-    - file: tags/2025.md
-    - file: tags/2024.md
-    - file: tags/2023.md
-    - file: tags/Flora Fauna.md
-    - file: contact.md
+    
     - pattern: posts/*.md
       hidden: true
 
@@ -48,6 +43,7 @@ project:
       ToC_depth: 2
       
       articles:
+        
         - posts/italy-spring-2025.md
         - posts/southeast-asia-april-2025.md
         - posts/here-comes-spring-sydney-2025.md
