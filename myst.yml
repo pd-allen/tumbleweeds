@@ -32,19 +32,6 @@ project:
     - pattern: posts/*.md
       hidden: true
 
-exports:
-  - format: pdf
-    output: _build/pdf/blog-document.pdf
-    engine: typst
-    # Tell the PDF compiler explicitly which files to stitch into your book
-    articles:
-      - index.md
-      - tags/2025.md
-      - tags/2024.md
-      - tags/2023.md
-      - tags/Flora Fauna.md
-      - contact.md
-
 site:
   options:
     logo: tumbleweed.png

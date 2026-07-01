@@ -1,9 +1,10 @@
 ---
 title: The Traveling Tumbleweeds
-subtitle: Terry and Sandy Travel the World
-description: A blog about their adventure as nomads
+exports:
+  - format: pdf
+    output: _build/pdf/blog-document.pdf
+    engine: typst
 ---
-
 # Traveling Tumbleweeds
 
 
