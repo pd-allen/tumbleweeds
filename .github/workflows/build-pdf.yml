@@ -18,17 +18,15 @@ jobs:
           node-version: '24'
 
       - name: Setup Typst
-        uses: typst-community/setup-typst@v3
+        uses: typst-community/setup-typst@v4
 
       - name: Install MyST CLI
         run: npm install -g mystmd
 
       - name: Build PDF Document
         run: |
-          # The --all flag forces MyST to read the project exports block
-          myst build --all --pdf
-          echo "=== Verifying PDF output ==="
-          ls -l _build/pdf/ || echo "No PDF directory contents found."
+          # Build using the specific project layout targets configured in myst.yml
+          myst build --all
 
       - name: Upload PDF Artifact Only
         uses: actions/upload-artifact@v4
