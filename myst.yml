@@ -1,61 +1,36 @@
-version: 1
-project:
-  title: The Traveling Tumbleweeds
-  description: Terry and Sandy tour the World.
-  copyright: '2026'
-  keywords:
-    - "2025"
-    - "2024"
-    - "2023"
-    - "Flora Fauna"
-  github: https://pd-allen.github.io/tumbleweeds/
-  exclude:
-    - _build
-    - Thumbs.db
-    - .DS_Store
-    - '**.ipynb_checkpoints'
-    - generate_rss.py
-    - inject_comments.py
-    - rss.xml
-    - atom.xml
-    - fonts/**
-    - CONDUCT.md
-    - CONTRIBUTING.md
-    - README.md
-  toc:
-    - file: index.md
-    - file: tags/2025.md
-    - file: tags/2024.md
-    - file: tags/2023.md
-    - file: tags/Flora Fauna.md
-    - file: contact.md
-    - pattern: posts/*.md
-      hidden: true
+name: Build and Deploy PDF
 
-  # FIX: Indented by 2 spaces so it is a child item of 'project:'
-  exports:
-    - format: pdf
-      template: plain_typst_book
-      output: blog-document.pdf
-      articles:
-        - index.md
-        - tags/2025.md
-        - tags/2024.md
-        - tags/2023.md
-        - tags/Flora Fauna.md
-        - contact.md
+on:
+  push:
+    branches:
+      - main
 
-site:
-  options:
-    logo: tumbleweed.png
-    logo_dark: tumbleweed.png
-    favicon: fav.ico
-    style: custom.css
-    folders: true
-  actions:
-    - title: RSS
-      url: https://opengeos.org/myst-blog-template/rss.xml
-  template: book-theme
-  parts:
-    primary_sidebar_footer: ''
-    footer: |
+jobs:
+  build-pdf:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Setup Typst
+        uses: typst-community/setup-typst@v4
+
+      - name: Install MyST CLI
+        run: npm install -g mystmd
+
+      - name: Build PDF Document
+        run: |
+          # Target project-level exports
+          myst build --pdf
+
+      - name: Upload PDF Artifact Only
+        uses: actions/upload-artifact@v4
+        with:
+          name: compiled-blog-pdf
+          path: _build/exports/blog-document.pdf
+          if-no-files-found: error
