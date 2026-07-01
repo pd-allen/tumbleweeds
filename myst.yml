@@ -1,15 +1,13 @@
 version: 1
 project:
   title: The Traveling Tumbleweeds
-  subtitle: Terry and Sandy Tour the World
   description: Terry and Sandy tour the World.
   copyright: '2026'
-  date: 2026-07-01
   
-  # Adding an explicit author list populates the front cover and removes blank pages
-  authors:
-    - name: Terry Sullivan
-    - name: Sandy Cyr
+  # Setting these to null blocks them from printing an automated cover layout
+  subtitle: null
+  authors: null
+  date: null
 
   keywords:
     - "2025"
@@ -44,6 +42,11 @@ project:
     - format: typst
       template: plain_typst_book
       output: _build/exports/blog-document.pdf
+      
+      # Template custom parameters to control book structure
+      show_ToC: true
+      ToC_depth: 2
+      
       articles:
         - index.md
         - tags/2025.md
