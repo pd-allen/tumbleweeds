@@ -9,9 +9,10 @@ project:
   
   copyright: '2026'
   keywords:
-    - 2025
-    - 2024
-    - 2023
+    - "2025"
+    - "2024"
+    - "2023"
+    - "Flora Fauna"
   github: https://pd-allen.github.io/tumbleweeds/
   exclude:
     - _build
