@@ -1,0 +1,109 @@
+version: 1
+project:
+  title: The Traveling Tumbleweeds
+  description: Terry and Sandy tour the World.
+  copyright: '2026'
+  
+  # Setting these to null blocks them from printing an automated cover layout
+  subtitle: null
+  authors: null
+  date: null
+
+  keywords:
+    - "2025"
+    - "2024"
+    - "2023"
+    - "Flora Fauna"
+  github: https://pd-allen.github.io/tumbleweeds/
+  exclude:
+    - _build
+    - Thumbs.db
+    - .DS_Store
+    - '**.ipynb_checkpoints'
+    - generate_rss.py
+    - inject_comments.py
+    - rss.xml
+    - atom.xml
+    - fonts/**
+    - CONDUCT.md
+    - CONTRIBUTING.md
+    - README.md
+  toc:
+    - file: index.md
+    - file: tags/2025.md
+    - file: tags/2024.md
+    - file: tags/2023.md
+    - file: tags/Flora Fauna.md
+    - file: contact.md
+    - pattern: posts/*.md
+      hidden: true
+
+  exports:
+    - format: typst
+      template: plain_typst_book
+      output: _build/exports/blog-document.pdf
+      
+      # Template custom parameters to control book structure
+      show_ToC: true
+      ToC_depth: 2
+      
+      articles:
+        - posts/italy-spring-2025.md
+        - posts/southeast-asia-april-2025.md
+        - posts/here-comes-spring-sydney-2025.md
+        - posts/in-search-of-the-tasmanian-devil-febuary-2025.md
+        - posts/back-in-potts-point-sydney-jan-feb-2025.md
+        - posts/touring-south-america-winter-2024.md
+        - posts/touring-the-iberian-peninsula-fall-2024.md
+        - posts/from-amsterdam-to-barcelona.md
+        - posts/summer-in-canada-2024.md
+        - posts/run-to-the-barn-june-2024.md
+        - posts/vancouver-in-may-31-may-2024.md
+        - posts/back-in-canada-1-apr-2024.md
+        - posts/from-newcastle-to-sydney-12-march-2024.md
+        - posts/gold-coast-27-march-2024.md
+        - posts/south-australia-3-march-2024.md
+        - posts/melbourne-well-that-was-fun-29-january.md
+        - posts/christmas-in-melbourne.md
+        - posts/farewell-sydney-28-november-2023.md
+        - posts/welcome-to-chippendale-1-nov-2023.md
+        - posts/great-north-walk-coogee-to-bondi-walks-15-oct-2023.md
+        - posts/watsons-bay-to-bondi-walk-3-oct-2023.md
+        - posts/sydney-1-oct.md
+        - posts/vancouver-22-to-29-sept.md
+        - posts/canadian-rockies-17-to-21-sept.md
+        - posts/glacier-national-park-14-16-sept.md
+        - posts/nomads-30-aug-2023.md
+        - posts/flora-fauna-food-and-funny.md
+        - posts/flora-fauna-food-and-funny-ii-and-festive.md
+        - posts/flora-fauna-food-and-funny-iii.md
+        - posts/flora-fauna-food-and-funny-iv.md
+        - posts/flora-fauna-food-and-funny-v.md
+        - posts/flora-fauna-food-and-funny-vi.md
+        - posts/flora-fauna-food-and-funny-vii.md
+        - posts/flora-fauna-food-and-funny-viii.md
+        - posts/flora-fauna-food-and-funny-ix.md
+        - posts/flower-fauna-food-and-fun-x.md
+        - posts/flower-fauna-food-and-funny-xi.md
+        - posts/flora-fauna-food-and-funny-xii.md
+        - posts/flower-fauna-food-and-funny-xiii.md
+        - posts/flora-fauna-food-and-funny-xiv-aka-tasmania.md
+        - posts/flora-fauna-food-and-fun-xv.md
+        - posts/flora-fauna-food-and-funny-xvi.md
+        - posts/flora-fauna-food-and-funny-xvii.md
+        - posts/flower-fauna-food-and-funny-xviii.md
+
+site:
+  options:
+    logo: tumbleweed.png
+    logo_dark: tumbleweed.png
+    favicon: fav.ico
+    style: custom.css
+    folders: true
+  actions:
+    - title: RSS
+      url: https://opengeos.org/myst-blog-template/rss.xml
+  template: book-theme
+  parts:
+    primary_sidebar_footer: ''
+    footer: |
