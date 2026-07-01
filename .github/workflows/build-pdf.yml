@@ -1,29 +1,33 @@
 name: Build and Deploy PDF
 on:
-push:
-branches: [ main ]
+  push:
+    branches:
+      - main
+
 jobs:
-build-pdf:
-runs-on: ubuntu-latest
-steps:
-- name: Checkout Repository
-uses: actions/checkout@v4
-- name: Setup Node.js
-uses: actions/setup-node@v4
-with:
-node-version: '20'
-- name: Install MyST CLI & Typst
-run: |
-npm install -g mystmd
-# Install Typst for lightning fast PDF generation
-sudo wget https://github.com/typst/typst/releases/latest/download/typstx86_
-64-unknown-linux-musl.tar.xz
-tar -xf typst-x86_64-unknown-linux-musl.tar.xz
-sudo mv typst-x86_64-unknown-linux-musl/typst /usr/local/bin/
-- name: Build PDF
-run: myst build --all --pdf
-- name: Upload PDF Artifact
-uses: actions/upload-artifact@v4
-with:
-name: blog-pdf
-path: _build/pdf/
+  build-pdf:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install MyST CLI & Typst
+        run: |
+          npm install -g mystmd
+          sudo wget https://github.com/typst/typst/releases/latest/download/typst-x86_64-unknown-linux-musl.tar.xz
+          tar -xf typst-x86_64-unknown-linux-musl.tar.xz
+          sudo mv typst-x86_64-unknown-linux-musl/typst /usr/local/bin/
+
+      - name: Build PDF
+        run: myst build --all --pdf
+
+      - name: Upload PDF Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: blog-pdf
+          path: _build/pdf/
